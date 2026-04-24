@@ -1,50 +1,112 @@
-import Image from "next/image";
-import Stripes from "@/public/images/stripes-dark.svg";
-
 export default function Cta() {
   return (
-    <section>
+    <section style={{ backgroundColor: "#F4F1DE" }} className="pb-16 md:pb-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div
-          className="relative overflow-hidden rounded-2xl text-center shadow-xl before:pointer-events-none before:absolute before:inset-0 before:-z-10 before:rounded-2xl before:bg-gray-900"
+          className="relative overflow-hidden rounded-3xl text-center shadow-2xl"
           data-aos="zoom-y-out"
+          style={{ backgroundColor: "#6B705C" }}
         >
-          {/* Glow */}
+          {/* Decorative organic blob glow */}
           <div
-            className="absolute bottom-0 left-1/2 -z-10 -translate-x-1/2 translate-y-1/2"
+            className="pointer-events-none absolute -bottom-16 left-1/2 -z-10 -translate-x-1/2"
             aria-hidden="true"
           >
-            <div className="h-56 w-[480px] rounded-full border-[20px] border-blue-500 blur-3xl" />
-          </div>
-          {/* Stripes illustration */}
-          <div
-            className="pointer-events-none absolute left-1/2 top-0 -z-10 -translate-x-1/2 transform"
-            aria-hidden="true"
-          >
-            <Image
-              className="max-w-none"
-              src={Stripes}
-              width={768}
-              height={432}
-              alt="Stripes"
+            <div
+              className="h-64 w-[500px] rounded-full blur-3xl"
+              style={{ backgroundColor: "rgba(160,120,80,0.4)" }}
             />
           </div>
-          <div className="px-4 py-12 md:px-12 md:py-20">
-            <h2 className="mb-6 border-y text-3xl font-bold text-gray-200 [border-image:linear-gradient(to_right,transparent,--theme(--color-slate-700/.7),transparent)1] md:mb-12 md:text-4xl">
-              Create your next project with Simple
+
+          {/* Top decorative leaf pattern */}
+          <div
+            className="pointer-events-none absolute inset-0 overflow-hidden"
+            aria-hidden="true"
+          >
+            <svg
+              className="absolute -right-12 -top-12 opacity-10"
+              width={260}
+              height={260}
+              viewBox="0 0 260 260"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="130" cy="130" r="130" fill="#F4F1DE" />
+              <circle cx="130" cy="130" r="90" fill="none" stroke="#F4F1DE" strokeWidth="1" />
+              <circle cx="130" cy="130" r="50" fill="none" stroke="#F4F1DE" strokeWidth="1" />
+            </svg>
+            <svg
+              className="absolute -bottom-12 -left-12 opacity-10"
+              width={200}
+              height={200}
+              viewBox="0 0 200 200"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="100" cy="100" r="100" fill="#F4F1DE" />
+            </svg>
+          </div>
+
+          <div className="relative px-6 py-16 md:px-16 md:py-24">
+            {/* Badge */}
+            <span
+              className="mb-6 inline-block rounded-full border px-5 py-1.5 text-xs font-bold uppercase tracking-widest"
+              style={{ borderColor: "rgba(244,241,222,0.4)", color: "rgba(244,241,222,0.85)" }}
+            >
+              🌿 Mulai Perjalanan Hijaumu
+            </span>
+
+            <h2
+              className="mb-6 text-3xl font-black leading-tight md:text-5xl"
+              style={{ color: "#F4F1DE", letterSpacing: "-0.03em" }}
+            >
+              Bergabunglah bersama ribuan keluarga
+              <br className="hidden md:block" />
+              yang telah memilih{" "}
+              <span style={{ color: "#e8e4ca" }}>AMERTA.</span>
             </h2>
-            <div className="mx-auto max-w-xs sm:flex sm:max-w-none sm:justify-center">
+
+            <p
+              className="mx-auto mb-10 max-w-xl text-base leading-relaxed md:text-lg"
+              style={{ color: "rgba(244,241,222,0.8)" }}
+            >
+              Setiap pembelian AMERTA membantu mengurangi 500+ lembar plastik
+              dari lautan setiap tahun. Bersama kita bisa.
+            </p>
+
+            <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <a
-                className="btn group mb-4 w-full bg-linear-to-t from-blue-600 to-blue-500 bg-[length:100%_100%] bg-[bottom] text-white shadow-sm hover:bg-[length:100%_150%] sm:mb-0 sm:w-auto"
-                href="#0"
+                href="#shop"
+                className="inline-flex items-center gap-2 rounded-full px-9 py-4 text-sm font-black shadow-xl transition-all hover:scale-105 hover:shadow-2xl active:scale-95"
+                style={{
+                  backgroundColor: "#F4F1DE",
+                  color: "#6B705C",
+                  boxShadow: "0 8px 32px rgba(0,0,0,0.25)",
+                }}
               >
-                <span className="relative inline-flex items-center">
-                  Start Free Trial{" "}
-                  <span className="ml-1 tracking-normal text-blue-300 transition-transform group-hover:translate-x-0.5">
-                    -&gt;
-                  </span>
-                </span>
+                Mulai Langkah Hijau →
               </a>
+              <a
+                href="#learn"
+                className="inline-flex items-center gap-2 rounded-full border px-9 py-4 text-sm font-semibold transition-all hover:scale-105 active:scale-95"
+                style={{
+                  borderColor: "rgba(244,241,222,0.5)",
+                  color: "#F4F1DE",
+                  backgroundColor: "transparent",
+                }}
+              >
+                Lihat Koleksi Kami
+              </a>
+            </div>
+
+            {/* Trust badges */}
+            <div
+              className="mt-10 flex flex-wrap justify-center gap-6 text-xs font-semibold"
+              style={{ color: "rgba(244,241,222,0.6)" }}
+            >
+              <span>✓ Gratis ongkir se-Indonesia</span>
+              <span>✓ Garansi uang kembali 30 hari</span>
+              <span>✓ Bahan bersertifikat organik</span>
             </div>
           </div>
         </div>
