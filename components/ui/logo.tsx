@@ -8,7 +8,7 @@ export default function Logo() {
         alt="Amerta Logo"
         width={50}
         height={50}
-        className="h-14 w-auto"
+        className="h-10 w-auto md:h-14"
         priority
       />
     </div>

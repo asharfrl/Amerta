@@ -40,7 +40,7 @@ export default function Header() {
             <li>
               <Link
                 href="#shop"
-                className="inline-flex items-center rounded-full px-5 py-2 text-xs font-bold shadow-md transition-all hover:scale-105 hover:shadow-lg active:scale-95"
+                className="inline-flex items-center rounded-full px-3 py-2 md:px-5 md:py-2.5 text-[10px] md:text-xs font-bold shadow-md transition-all hover:scale-105 hover:shadow-lg active:scale-95 whitespace-nowrap"
                 style={{
                   backgroundColor: "#6B705C",
                   color: "#F4F1DE",
