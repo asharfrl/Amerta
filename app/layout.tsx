@@ -24,9 +24,10 @@ export const metadata: Metadata = {
       "Bungkus makanan organik dari lilin lebah alami. Solusi ramah lingkungan, reusable, dan 100% biodegradable untuk dapur minim plastik.",
     images: [
       {
-        url: "/images/og-image.png",
+        url: "https://amerta-beeswax.vercel.app/images/og-image.png",
         width: 1200,
         height: 630,
+        type: "image/png",
         alt: "AMERTA Beeswax Wraps",
       },
     ],
@@ -36,7 +37,7 @@ export const metadata: Metadata = {
     title: "AMERTA | Kehangatan Alam dalam Genggaman",
     description:
       "Bungkus makanan organik dari lilin lebah alami. Solusi ramah lingkungan, reusable, dan 100% biodegradable untuk dapur minim plastik.",
-    images: ["/images/og-image.png"],
+    images: ["https://amerta-beeswax.vercel.app/images/og-image.png"],
   },
 };
 
