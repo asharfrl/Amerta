@@ -37,6 +37,8 @@ export default function BeeswaxHeroMobile() {
   const featY = useTransform(smooth, [0.5, 0.6], [20, 0]);
   const ctaOpacity = useTransform(smooth, [0.6, 0.7], [0, 1]);
 
+  const scrollIndicatorOpacity = useTransform(smooth, [0, 0.1], [1, 0]);
+
   // Brand colors
   const sage = "#6B705C";
   const sageDk = "#4f5444";
@@ -74,6 +76,21 @@ export default function BeeswaxHeroMobile() {
           <motion.div className="relative text-center mt-2" style={{ opacity: ctaOpacity }}>
           </motion.div>
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-40 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-30"
+          style={{ opacity: scrollIndicatorOpacity }}
+        >
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] ml-[0.4em]" style={{ color: sage }}>Scroll</span>
+          <div className="h-8 w-px bg-current opacity-20" style={{ color: sage }} />
+          <motion.div 
+            className="w-1 h-1 rounded-full bg-current"
+            style={{ color: sage }}
+            animate={{ y: [0, 12, 0], opacity: [0, 1, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
       </div>
     </section>
   );

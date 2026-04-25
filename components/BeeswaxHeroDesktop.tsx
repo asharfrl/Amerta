@@ -35,6 +35,8 @@ export default function BeeswaxHeroDesktop() {
   const parallaxY = useTransform(smooth, [0, 1], [150, -150]);
   const parallaxOpacity = useTransform(smooth, [0, 0.2, 0.8, 1], [0, 0.05, 0.05, 0]);
 
+  const scrollIndicatorOpacity = useTransform(smooth, [0, 0.15], [1, 0]);
+
   const sage = "#6B705C";
   const sageDk = "#4f5444";
   const cream = "#F4F1DE";
@@ -84,6 +86,21 @@ export default function BeeswaxHeroDesktop() {
           </motion.div>
           
         </div>
+
+        {/* Scroll Indicator */}
+        <motion.div 
+          className="absolute bottom-15 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-30"
+          style={{ opacity: scrollIndicatorOpacity }}
+        >
+          <span className="text-[10px] font-black uppercase tracking-[0.4em] ml-[0.4em]" style={{ color: sage }}>Scroll</span>
+          <div className="h-10 w-px bg-current opacity-20" style={{ color: sage }} />
+          <motion.div 
+            className="w-1 h-1 rounded-full bg-current"
+            style={{ color: sage }}
+            animate={{ y: [0, 16, 0], opacity: [0, 1, 0] }}
+            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          />
+        </motion.div>
       </div>
     </section>
   );
