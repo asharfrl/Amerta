@@ -24,8 +24,9 @@ export default function RootLayout({
     <html lang="id" className="scroll-smooth">
       <body
         className={`${montserrat.variable} font-montserrat bg-amerta-cream tracking-tight text-amerta-dark antialiased`}
+        suppressHydrationWarning
       >
-        <div className="flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
+        <div className="relative flex min-h-screen flex-col overflow-hidden supports-[overflow:clip]:overflow-clip">
           {children}
         </div>
       </body>
